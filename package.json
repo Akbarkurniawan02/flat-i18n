@@ -1,0 +1,30 @@
+{
+  "name": "flat-i18n",
+  "version": "0.1.0",
+  "description": "Flat JSON based i18n. Zero magic.",
+  "keywords": ["i18n", "internationalization", "json", "react", "nextjs"],
+  "license": "MIT",
+  "author": "Exagon-Soft",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
