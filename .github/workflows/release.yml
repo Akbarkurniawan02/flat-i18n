@@ -5,11 +5,12 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
-
-    # Prevent infinite loop
     if: github.actor != 'github-actions[bot]'
 
     steps:
@@ -36,7 +37,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Bump version (patch)
+      - name: Bump version
         run: |
           npm version patch -m "chore(release): %s [skip ci]"
 
@@ -45,6 +46,5 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Push version commit and tag
-        run: |
-          git push origin main --tags
+      - name: Push commit and tags
+        run: git push origin main --tags
