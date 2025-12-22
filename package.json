@@ -1,6 +1,6 @@
 {
   "name": "flat-i18n",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Flat JSON based i18n. Zero magic.",
   "keywords": [
     "i18n",
