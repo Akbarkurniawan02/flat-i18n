@@ -1,32 +1,32 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext } from "react";
 import type { ReactNode } from "react";
 import { getText } from "../core";
 
 type I18nContextValue = {
-  locale: string;
-  setLocale: (locale: string) => void;
+  lang: string;
   t: (key: string) => string;
 };
 
 const I18nContext = createContext<I18nContextValue | null>(null);
 
+/**
+ * Controlled i18n provider.
+ * Language is owned by the application.
+ */
 export function I18nProvider({
-  initialLocale,
+  currentLang,
   children,
 }: {
-  initialLocale: string;
+  currentLang: string;
   children: ReactNode;
 }) {
-  const [locale, setLocale] = useState(initialLocale);
-
   return (
     <I18nContext.Provider
       value={{
-        locale,
-        setLocale,
-        t: (key: string) => getText(key, locale),
+        lang: currentLang,
+        t: (key: string) => getText(key, currentLang),
       }}
     >
       {children}

@@ -7,6 +7,7 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/flat-i18n"><img src="https://img.shields.io/npm/v/flat-i18n?color=22d3ee&label=npm" /></a>
   <a href="https://www.npmjs.com/package/flat-i18n"><img src="https://img.shields.io/npm/dm/flat-i18n?color=22d3ee" /></a>
+  <a href="https://github.com/exagonssoft/flat-i18n/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/exagonssoft/flat-i18n/ci.yml?label=CI" /></a>
   <img src="https://img.shields.io/badge/typescript-100%25-blue" />
   <img src="https://img.shields.io/badge/zero--dependencies-✔-success" />
   <img src="https://img.shields.io/badge/license-MIT-green" />
@@ -144,17 +145,64 @@ const title = getText("seo.title", "es");
 
 ---
 
-## React usage (optional)
+## React usage (controlled, optional)
 
-Wrap your app with the provider:
+`flat-i18n` **does not manage the language state**.
+
+Your application owns the selected language (user preference, storage, API, etc.) and passes it to the provider.
+
+### App-level language state (example)
 
 ```tsx
-import { I18nProvider } from "flat-i18n";
+import { createContext, useContext, useState } from "react";
 
-<I18nProvider initialLocale="en">
-  <App />
-</I18nProvider>
+const AppLangContext = createContext(null);
+
+export function AppLangProvider({ children }) {
+  const [lang, setLang] = useState("en");
+
+  return (
+    <AppLangContext.Provider value={{ lang, setLang }}>
+      {children}
+    </AppLangContext.Provider>
+  );
+}
+
+export function useAppLang() {
+  return useContext(AppLangContext);
+}
 ```
+
+### Wiring flat-i18n
+
+```tsx
+import { I18nProvider } from "flat-i18n/react";
+import { useAppLang } from "./AppLangContext";
+
+function AppShell({ children }) {
+  const { lang } = useAppLang();
+
+  return (
+    <I18nProvider currentLang={lang}>
+      {children}
+    </I18nProvider>
+  );
+}
+```
+
+### Using translations in components
+
+```tsx
+import { useI18n } from "flat-i18n/react";
+
+function Header() {
+  const { t } = useI18n();
+  return <h1>{t("app.name")}</h1>;
+}
+```
+
+Changing the app language automatically updates all translations.
+No routing. No reloads.
 
 Use it in components:
 
